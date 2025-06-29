@@ -1,3 +1,4 @@
+
 body {
     margin: 0;
     font-family: 'Segoe UI', sans-serif;
@@ -50,26 +51,27 @@ h2  {
 }
 
 .bg1 {
-    background-image: url("./images/Img1.jpeg");
+    background-image: url("../images/Img1.jpeg");
     background-position: 0 60%;
 }
 
 .bg2    {
-    background-image: url("./images/Img2.jpeg");
-    background-position: 0 80%;
-    margin-top: 0;
-}
-
-.bg3    {
-    background-image: url("./images/Img3.jpeg");
+    background-image: url("../images/Img3.jpeg");
     background-position: contain;
     margin-top: 0;
 }
 
+.bg3    {
+    background-image: url("../images/Img4.jpg");
+    background-position: 0 50%;
+    margin-top: 0;
+}
+
 .bg4    {
-    background-image: url("assets/images/Img4.jpg");
+    background-image: url("../images/Img2.jpeg");
     background-position: 0 80%;
     margin-top: 0;
+    
 }
 
 .bg1, .bg2, .bg3, .bg4 {
