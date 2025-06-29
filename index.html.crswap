@@ -1,0 +1,37 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home - Happy Birthday</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<section class="fade bg1">
+<header>
+    <nav>
+        <a href="letter.html">Letter</a>
+        <a href="gallery.html">Gallery</a>
+        <a href="video.html">Video</a>
+    </nav>
+</header>
+    <h2 class="slide-up">To the girl</h2>
+    <h2 class="slide-up">Who brings a smile to my face</h2>
+    <h2 class="slide-up">Whenever I get to see her</h2>
+</section>
+
+<section class="fade bg2">
+    <h2 class="slide-up">To the girl</h2>
+    <h2 class="slide-up">Who makes the world</h2>
+    <h2 class="slide-up">A better place to live in</h2>
+</section>
+
+<section class="pastel-bg">
+    <h2 class="slide-up">To the girl</h2>
+    <h2 class="slide-up">With whom I wanna end up with</h2>
+    <h2 class="slide-up"></h2>
+</section>
+<footer>Made with love 💖</footer>
+<script src="assets/js/script.js"></script>
+</body>
+</html>

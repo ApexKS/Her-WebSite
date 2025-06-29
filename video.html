@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Video</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/script.js"></script>
+    <script>
+  function revealVideo() {
+    document.querySelector('.video-cover').classList.add('hidden');
+    document.getElementById('myVideo').play();
+  }
+</script>
+
+</head>
+<body>
+<header>
+    <h2 style="color:darksalmon; margin-bottom: 50px;">A short Video-Note for you</h2>
+</header>
+<div class="video-container">
+  <div class="video-cover" onclick="revealVideo()">💌 Click to Reveal</div>
+  <video id="myVideo" controls>
+    <source src="assets/images/vid.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</div>
+<footer style="text-align: left; margin-left: 10px; margin-bottom: 10px;"><a href="index.html" class="next-button">Less Go Back</a></footer>
+</body>
+</html>
