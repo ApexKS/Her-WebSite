@@ -5,6 +5,44 @@
     <meta charset="UTF-8">
     <title>Home - Happy Birthday</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+  body {
+    opacity: 0;
+    animation: fadeInPage 1.5s ease forwards;
+  }
+
+  @keyframes fadeInPage {
+    to {
+      opacity: 1;
+    }
+  }
+</style>
+    <script>
+  document.addEventListener('DOMContentLoaded', () => {
+    let musicStarted = false;
+
+    const startMusic = () => {
+      if (!musicStarted) {
+        document.getElementById("bg-music").play();
+        musicStarted = true;
+      }
+    };
+
+    document.body.addEventListener('click', startMusic, { once: true });
+  });
+    const audio = document.getElementById('bg-music');
+  const toggle = document.getElementById('mute-toggle');
+
+  toggle.addEventListener('click', () => {
+    if (audio.muted) {
+      audio.muted = false;
+      toggle.textContent = 'Play';
+    } else {
+      audio.muted = true;
+      toggle.textContent = 'Pause';
+    }
+  });
+</script>
 </head>
 <body>
 <section class="fade bg1">
@@ -32,5 +70,22 @@
 <footer ><a href="video.html" class="next-button">P.T.O. 🥰</a></footer>    
 </section>
 <script src="assets/js/script.js"></script>
+    <audio id="bg-music" loop>
+  <source src="assets\images\music.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+<button id="mute-toggle" style="
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 30px;
+  background: #ffe6f2;
+  color: #8a3e6e;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+">Pause</button>
 </body>
 </html>
