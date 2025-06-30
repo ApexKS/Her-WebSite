@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Just for You</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      background: linear-gradient(135deg, #ffe9f3, #fef6fb);
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .message {
+      text-align: center;
+      color: #8a3e6e;
+      font-size: 3rem;
+      opacity: 0;
+      animation: fadeIn 2s ease forwards;
+      cursor: pointer;
+    }
+
+    .message:hover {
+      text-decoration: underline;
+    }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <div class="message" onclick="goToMainSite()">
+    This is just for you.<br><br>Click to begin.
+  </div>
+<audio id="bg-music" src="assets\images\music.mp3" loop></audio>
+
+<script>
+  function goToMainSite() {
+    document.getElementById("bg-music").play();
+    window.location.href = "index.html";
+  }
+</script>
+
+</body>
+</html>
