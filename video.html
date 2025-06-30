@@ -1,30 +1,82 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Video</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <script src="assets/js/script.js"></script>
-    <script>
-  function revealVideo() {
-    document.querySelector('.video-cover').classList.add('hidden');
-    document.getElementById('myVideo').play();
-  }
-</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Birthday Video</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #fff6fa;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
 
+    .video-container {
+      position: relative;
+      width: 90%;
+      max-width: 800px;
+      height: 450px;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+
+    .video-cover {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%;
+      height: 100%;
+      background: #fbe3ef;
+      color: #8a3e6e;
+      font-size: 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 2;
+      cursor: pointer;
+      transition: opacity 1s ease;
+    }
+
+    .video-cover.hidden {
+      opacity: 0;
+      pointer-events: none;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+    }
+  </style>
 </head>
 <body>
-<header>
-    <h2 style="color:darksalmon; margin-bottom: 50px;">A short Video-Note for you</h2>
-</header>
-<div class="video-container">
-  <div class="video-cover" onclick="revealVideo()">💌 Click to Reveal</div>
-  <video id="myVideo" controls>
-    <source src="assets/images/vid.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-</div>
-<footer style="text-align: left; margin-left: 10px; margin-bottom: 10px;"><a href="index.html" class="next-button">Less Go Back</a></footer>
+
+  <div class="video-container">
+    <div class="video-cover" onclick="revealVideo()">💌 Click to Reveal</div>
+    
+    <!-- YouTube embed with autoplay & modest branding -->
+    <iframe 
+      id="youtubeEmbed"
+      src=""
+      allow="autoplay; encrypted-media"
+      allowfullscreen
+      loading="lazy"
+    ></iframe>
+  </div>
+
+  <script>
+    function revealVideo() {
+      document.querySelector('.video-cover').classList.add('hidden');
+      
+      // Replace 'YOUTUBE_VIDEO_ID' with your actual ID
+      const embed = document.getElementById('youtubeEmbed');
+      embed.src = "https://www.youtube.com/embed/9OXMmHM9u4o?si=6FT_-Uk0_Ugrxu3j?autoplay=1&rel=0&modestbranding=1";
+    }
+  </script>
+
 </body>
 </html>
