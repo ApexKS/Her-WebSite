@@ -9,10 +9,10 @@
       margin: 0;
       font-family: 'Segoe UI', sans-serif;
       background: #fff6fa;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
+     display: flex;
+  flex-direction: column;   /* 👈 STACKS items vertically */
+  align-items: center;
+  justify-content: flex-start; /* 👈 start from the top */
     }
 
     .video-container {
@@ -51,6 +51,36 @@
       height: 100%;
       border: none;
     }
+    h2  {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 80px;
+    text-align: center;
+    font-weight: 100;
+    color: white;
+    margin-bottom: 300px;
+}
+footer {
+    width: 90%;
+    text-align: left;
+    margin-left: -100px;
+    margin-bottom: 20px;
+}
+.next-button {
+    font-family: 'Times New Roman', Times, serif;
+  display: inline-block;
+  margin-top: 2rem;
+  padding: 1rem 2rem;
+  background-color: #ffe6f2;
+  color: #5a3e60;
+  font-size: 1.2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.next-button:hover {
+  background-color: #fdd0e8;
+  transform: scale(1.05);
+}
   </style>
 </head>
 <body>
@@ -79,6 +109,6 @@
       embed.src = "https://www.youtube.com/embed/9OXMmHM9u4o?si=6FT_-Uk0_Ugrxu3j?autoplay=1&rel=0&modestbranding=1";
     }
   </script>
-<footer style="text-align: left; margin-left: 10px; margin-bottom: 10px;"><a href="index.html" class="next-button">Lesss Go Back🤗</a></footer>
+<footer><a href="index.html" class="next-button">Lesss Go Back🤗</a></footer>
 </body>
 </html>
